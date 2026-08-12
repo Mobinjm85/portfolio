@@ -8,235 +8,515 @@
 </head>
 <body>
     <div class="container">
-        
-        <!-- بخش هدر -->
+
+        <!-- ==================== Navbar ==================== -->
+        <nav class="navbar box-shadow-soft">
+            <ul class="nav-links">
+                <li><a href="#about">درباره من</a></li>
+                <li><a href="#skills">مهارت‌ها</a></li>
+                <li><a href="#courses">دوره‌ها</a></li>
+                <li><a href="#experience">تجربه‌ها</a></li>
+                <li><a href="#specialties">تخصص‌ها</a></li>
+                <li><a href="#projects">نمونه‌کارها</a></li>
+            </ul>
+        </nav>
+
+        <!-- ==================== Header ==================== -->
         <header class="header">
             <h1>مبین جوادی مقدم</h1>
-            <p>طراح گرافیک، دانشجوی مهندسی کامپیوتر</p>
-            
-            <!-- دکمه دانلود رزومه (نسخه عکس) -->
-            <a href="images/resume.png" download="Mobin_Javadi_Moghaddam_Resume.png" class="print-btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            <p>گرافیست و برنامه‌نویس</p>
+            <a href="images/resume.webp" download="Mobin_Javadi_Moghaddam_Resume.webp" class="print-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                </svg>
                 دانلود رزومه
             </a>
         </header>
 
         <main>
-            <!-- ردیف اول: معرفی + تماس -->
-            <div class="hero-grid">
+            <!-- ==================== معرفی + تماس ==================== -->
+            <div class="hero-grid" id="about">
+                <!-- معرفی -->
                 <section class="about-section box-shadow-soft">
                     <div class="profile-wrapper">
                         <img src="images/profile.webp" alt="مبین جوادی مقدم" class="profile-pic">
                     </div>
                     <div class="about-text">
-                        <h2>سلام! من مبین هستم 👋</h2>
-                        <p>متولد ۱۳۸۵/۰۲/۱۶ و دانشجوی مهندسی کامپیوتر در دانشگاه شهاب دانش من بیش از ۴ سال سابقه در طراحی گرافیک دیجیتال و ۲ سال تجربه مستمر در برنامه‌نویسی دارم سعی می‌کنم دقت و توانایی تحلیلی مهندسی را با ظرافت‌های بصری هنر ترکیب کنم تا محصولاتی اثرگذار بسازم</p>
-                        <div class="tags">
-                            <span>Photoshop</span>
-                            <span>Illustrator</span>
-                            <span>Figma</span>
-                            <span>Premiere</span>
-                            <span>Python</span>
-                            <span>C++</span>
-                            <span>HTML/CSS</span>
-                            <span>Linux</span>
-                        </div>
+                        <h2>سلام! من مبین هستم</h2>
+                        <p>دانشجوی مهندسی کامپیوتر و علاقه‌مند به دنیای طراحی و برنامه‌نویسی هستم بیش از ۴ سال در زمینه طراحی گرافیک دیجیتال و حدود ۲ سال در حوزه برنامه‌نویسی تجربه و یادگیری مستمر داشته‌ام به طراحی رابط کاربری، تولید محتوای بصری و توسعه پروژه‌های نرم‌افزاری علاقه دارم و همیشه در حال یادگیری و ساختن پروژه‌های جدید هستم</p>
                     </div>
                 </section>
 
+                <!-- ارتباط -->
                 <section class="contact-section box-shadow-soft">
                     <h3>ارتباط با من</h3>
                     <p class="contact-desc">برای انجام پروژه یا کارآموزی در دسترسم!</p>
                     <div class="contact-links-vertical">
                         <a href="tel:09982494704" class="contact-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
                             ۰۹۹۸۲۴۹۴۷۰۴
                         </a>
-                        <a href="https://t.me/mjavadi16" target="_blank" class="contact-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                        <a href="https://t.me/mjavadi16" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                            </svg>
                             تلگرام
                         </a>
-                        <a href="https://ble.ir/Mobinjm16" target="_blank" class="contact-btn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                        <a href="https://ble.ir/Mobinjm16" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                            </svg>
                             بله
                         </a>
                     </div>
                 </section>
             </div>
 
-            <!-- ردیف دوم: تخصص‌ها -->
+            <!-- ==================== مهارت‌ها ==================== -->
+            <div class="section-title">
+                <h2>مهارت‌های من</h2>
+            </div>
+
+            <section class="skills-grid" id="skills">
+                <!-- طراحی -->
+                <div class="skill-category box-shadow-soft">
+                    <div class="skill-category-header">
+                        <span class="skill-category-icon">🎨</span>
+                        <h3>طراحی</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>Photoshop</span>
+                            <span class="skill-level level-good">خوب</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>Illustrator</span>
+                            <span class="skill-level level-good">خوب</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>Figma</span>
+                            <span class="skill-level level-medium">متوسط</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ویدیو و محتوا -->
+                <div class="skill-category box-shadow-soft">
+                    <div class="skill-category-header">
+                        <span class="skill-category-icon">🎬</span>
+                        <h3>ویدیو و محتوا</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>Premiere Pro</span>
+                            <span class="skill-level level-medium">متوسط</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>تولید محتوای بصری</span>
+                            <span class="skill-level level-medium">متوسط</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- برنامه‌نویسی -->
+                <div class="skill-category box-shadow-soft">
+                    <div class="skill-category-header">
+                        <span class="skill-category-icon">💻</span>
+                        <h3>برنامه‌نویسی</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>Python</span>
+                            <span class="skill-level level-medium">متوسط</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>HTML / CSS</span>
+                            <span class="skill-level level-medium">متوسط</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>C++</span>
+                            <span class="skill-level level-basic">مقدماتی</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>Git / GitHub</span>
+                            <span class="skill-level level-medium">متوسط</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- سیستم‌عامل -->
+                <div class="skill-category box-shadow-soft">
+                    <div class="skill-category-header">
+                        <span class="skill-category-icon">🖥️</span>
+                        <h3>سیستم‌عامل</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>Windows</span>
+                            <span class="skill-level level-good">خوب</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>macOS</span>
+                            <span class="skill-level level-good">خوب</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>Linux</span>
+                            <span class="skill-level level-good">خوب</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- نرم‌افزارهای اداری -->
+                <div class="skill-category box-shadow-soft">
+                    <div class="skill-category-header">
+                        <span class="skill-category-icon">📊</span>
+                        <h3>نرم‌افزارهای اداری</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>Microsoft Word</span>
+                            <span class="skill-level level-good">خوب</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>Microsoft PowerPoint</span>
+                            <span class="skill-level level-good">خوب</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>Microsoft Excel</span>
+                            <span class="skill-level level-medium">متوسط</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ابزارهای توسعه -->
+                <div class="skill-category box-shadow-soft">
+                    <div class="skill-category-header">
+                        <span class="skill-category-icon">🛠️</span>
+                        <h3>ابزارهای توسعه</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>VS Code</span>
+                            <span class="skill-level level-good">خوب</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>Terminal / Command Line</span>
+                            <span class="skill-level level-medium">متوسط</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== دوره‌ها ==================== -->
+            <div class="section-title">
+                <h2>دوره‌ها و گواهینامه‌ها</h2>
+            </div>
+            
+            <section class="courses-grid" id="courses">
+                <div class="course-card box-shadow-soft">
+                    <div class="course-icon">🌐</div>
+                    <div class="course-info">
+                        <h3>Build Responsive Real-World Websites with HTML and CSS</h3>
+                        <span>Udemy — Jonas Schmedtmann</span>
+                    </div>
+                </div>
+
+                <div class="course-card box-shadow-soft">
+                    <div class="course-icon">💻</div>
+                    <div class="course-info">
+                        <h3>The Complete Full-Stack Web Development Bootcamp</h3>
+                        <span>Udemy — Dr. Angela Yu</span>
+                    </div>
+                </div>
+
+                <div class="course-card box-shadow-soft">
+                    <div class="course-icon">🐍</div>
+                    <div class="course-info">
+                        <h3>Python 2023</h3>
+                        <span>PyTopia — Ali Hejazizo</span>
+                    </div>
+                </div>
+
+                <div class="course-card box-shadow-soft">
+                    <div class="course-icon">🧩</div>
+                    <div class="course-info">
+                        <h3>Project-Based Python</h3>
+                        <span>PyTopia — Ali Hejazizo</span>
+                    </div>
+                </div>
+
+                <div class="course-card box-shadow-soft">
+                    <div class="course-icon">🎨</div>
+                    <div class="course-info">
+                        <h3>دوره طراحی لوگو</h3>
+                        <span>آکادمی عزتی</span>
+                    </div>
+                </div>
+
+                <div class="course-card box-shadow-soft">
+                    <div class="course-icon">▶️</div>
+                    <div class="course-info">
+                        <h3>آموزش جامع یوتیوب</h3>
+                        <span>مکتب‌خونه — جادی میرمیرانی</span>
+                    </div>
+                </div>
+
+                <div class="course-card box-shadow-soft">
+                    <div class="course-icon">🎬</div>
+                    <div class="course-info">
+                        <h3>دوره صفر تا صد Premiere Pro</h3>
+                        <span>پویوت آکادمی — رضا نظری‌بیگی</span>
+                    </div>
+                </div>
+
+                <div class="course-card box-shadow-soft">
+                    <div class="course-icon">🖼️</div>
+                    <div class="course-info">
+                        <h3>دوره Photoshop</h3>
+                        <span>پویوت آکادمی</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== تجربه و فعالیت‌ها ==================== -->
+            <div class="section-title">
+                <h2>تجربه و فعالیت‌ها</h2>
+            </div>
+
+            <section class="experience-grid" id="experience">
+                <!-- آموزش C++ -->
+                <div class="experience-card box-shadow-soft">
+                    <div class="experience-header">
+                        <div class="experience-icon">👨‍🏫</div>
+                        <div>
+                            <h3>آموزش برنامه‌نویسی C++</h3>
+                            <span>فعالیت آموزشی</span>
+                        </div>
+                    </div>
+                    <p>برگزاری کلاس آموزش <strong>C++</strong> و آموزش مفاهیم برنامه‌نویسی به بیش از <strong>۲۰ دانش‌آموز</strong>، همراه با طراحی و ارزیابی بیش از <strong>۱۵ تمرین الگوریتمی</strong> با هدف تقویت مهارت حل مسئله</p>
+                    <div class="experience-tools">
+                        <span>C++</span>
+                        <span>الگوریتم</span>
+                        <span>حل مسئله</span>
+                    </div>
+                </div>
+
+                <!-- تولید محتوای آموزشی -->
+                <div class="experience-card box-shadow-soft">
+                    <div class="experience-header">
+                        <div class="experience-icon">📚</div>
+                        <div>
+                            <h3>تولید محتوای آموزشی</h3>
+                            <span>فعالیت آموزشی</span>
+                        </div>
+                    </div>
+                    <p>تهیه جزوه‌های آموزشی با هدف ساده‌سازی مفاهیم پایه برنامه‌نویسی و کمک به درک بهتر مباحث</p>
+                    <div class="experience-tools">
+                        <span>آموزش</span>
+                        <span>برنامه‌نویسی</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== تخصص‌ها ==================== -->
             <div class="section-title">
                 <h2>تخصص‌های من</h2>
             </div>
-            <section class="specialties-grid">
+
+            <section class="specialties-grid" id="specialties">
                 <div class="specialty-card box-shadow-soft">
                     <div class="specialty-icon">🎨</div>
                     <h3>طراحی گرافیک و برندینگ</h3>
-                    <p>طراحی لوگو، پوستر و هویت بصری با تسلط بر فتوشاپ و ایلاستریتور</p>
+                    <p>طراحی لوگو، پوستر، بنر و محتوای بصری با استفاده از Photoshop و Illustrator</p>
                 </div>
                 <div class="specialty-card box-shadow-soft">
                     <div class="specialty-icon">📱</div>
                     <h3>رابط و تجربه کاربری</h3>
-                    <p>طراحی استاندارد UI/UX برای وب‌سایت و اپلیکیشن‌ها با فیگما</p>
+                    <p>طراحی رابط کاربری وب‌سایت و اپلیکیشن با تمرکز بر سادگی، نظم بصری و تجربه کاربری</p>
                 </div>
                 <div class="specialty-card box-shadow-soft">
                     <div class="specialty-icon">🎬</div>
                     <h3>تدوین ویدیو</h3>
-                    <p>ویرایش حرفه‌ای ویدیو و تولید محتوای پویا با پریمیر</p>
+                    <p>تدوین و ویرایش ویدیو، ساخت محتوای ویدیویی و آماده‌سازی محتوا برای شبکه‌های اجتماعی با Premiere Pro</p>
                 </div>
                 <div class="specialty-card box-shadow-soft">
                     <div class="specialty-icon">💻</div>
-                    <h3>توسعه نرم‌افزار</h3>
-                    <p>توسعه و مهندسی وب با تمرکز بر برنامه‌نویسی پایتون</p>
+                    <h3>برنامه‌نویسی و توسعه</h3>
+                    <p>توسعه پروژه‌های شخصی و تمرینی با Python، HTML/CSS و آشنایی با C++</p>
                 </div>
                 <div class="specialty-card box-shadow-soft">
                     <div class="specialty-icon">👨‍🏫</div>
-                    <h3>آموزش و منتورینگ</h3>
-                    <p>سابقه تدریس زبان‌های برنامه‌نویسی و انتقال مفاهیم حل مسئله</p>
+                    <h3>آموزش و انتقال دانش</h3>
+                    <p>علاقه‌مند به آموزش مفاهیم برنامه‌نویسی و کمک به دیگران برای یادگیری و حل مسئله</p>
                 </div>
             </section>
 
-            <!-- ردیف سوم: نمونه‌کارها -->
+            <!-- ==================== نمونه‌کارها ==================== -->
             <div class="section-title">
                 <h2>نمونه‌کارهای من</h2>
             </div>
-            <section class="projects-grid">
-                
-                <!-- نمونه کار: طراحی بنر وب‌سایت (آیفون ۱۷) -->
+
+            <section class="projects-grid" id="projects">
+                <!-- ۱. پوستر شهری -->
                 <div class="project-card box-shadow-soft">
                     <div class="project-image-container">
-                        <img src="images/iPhone17.webp" alt="بنر فروشگاهی آیفون ۱۷" class="project-img" title="بنر آیفون (برای بزرگنمایی کلیک کنید)">
-                    </div>
-                    <div class="project-info">
-                        <h3>طراحی بنر فروشگاهی (آیفون ۱۷)</h3>
-                        <p>طراحی اسلایدر عریض وب‌سایت با تمرکز بر تایپوگرافی مدرن و ایجاد کال‌تو‌اکشن (CTA) واضح برای افزایش نرخ کلیک (CTR)</p>
-                    </div>
-                </div>
-
-                <!-- نمونه کار: طراحی بنر وب‌سایت (PS5) -->
-                <div class="project-card box-shadow-soft">
-                    <div class="project-image-container">
-                        <img src="images/ps5.webp" alt="بنر فروشگاهی پلی‌استیشن ۵" class="project-img" title="بنر PS5 (برای بزرگنمایی کلیک کنید)">
-                    </div>
-                    <div class="project-info">
-                        <h3>طراحی اسلایدر سایت (PS5)</h3>
-                        <p>طراحی بنر تبلیغاتی محصول با رعایت هارمونی رنگی، جداسازی دقیق سوژه از پس‌زمینه و فضاسازی مینیمال</p>
-                    </div>
-                </div>
-
-
-                <!-- عکس کفش مکرومه -->
-                <div class="project-card box-shadow-soft">
-                    <div class="project-image-container">
-                        <img src="images/LinoBaf.webp" alt="پست اینستاگرام" class="project-img" title="برای بزرگنمایی کلیک کنید)">
-                    </div>
-                    <div class="project-info">
-                        <h3>محتوای شبکه‌های اجتماعی (لینوباف)</h3>
-                        <p>طراحی پست‌های اینستاگرامی و تولید محتوای بصری برای کسب‌وکارهای آنلاین و فروشگاه‌های اینستاگرامی</p>
-                    </div>
-                </div>
-
-                <!-- نمونه کار: پوستر شهری حوزه علمیه ) -->
-                <div class="project-card box-shadow-soft">
-                    <!-- اضافه کردن کلاس double-img برای چیدمان دو عکسه -->
-                    <div class="project-image-container double-img">
-                        <!-- عکس اول: عکس نصب شده در شهر -->
-                        <img src="images/Hozeh.webp" alt="فایل طراحی پوستر" class="project-img" title="طرح اصلی (برای بزرگنمایی کلیک کنید)">
+                        <img src="images/Hozeh.webp" alt="طراحی بنر و پوستر شهری" class="project-img project-img-cover" loading="lazy" title="طراحی پوستر شهری">
                     </div>
                     <div class="project-info">
                         <h3>طراحی بنر و پوستر شهری</h3>
-                        <p>طراحی بنر اطلاع‌رسانی برای حوزه علمیه خواهران جهت اکران در سطح شهر انجام شده با <strong>فتوشاپ</strong> با تمرکز بر ترکیب‌بندی مناسب برای چاپ لارج‌فرمت و اجرای موفق در فضای شهری</p>
+                        <p>طراحی بنر اطلاع‌رسانی برای حوزه علمیه خواهران با تمرکز بر ترکیب‌بندی، خوانایی و آماده‌سازی طرح برای چاپ لارج‌فرمت و استفاده در فضای شهری</p>
+                        <div class="project-tools">
+                            <span class="project-tool">Photoshop</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- نمونه کار: طراحی لوگو شفاگیران ناب -->
+                <!-- ۲. لوگو شفاگیران ناب -->
                 <div class="project-card box-shadow-soft">
                     <div class="project-image-container">
-                        <img src="images/shafa.webp" alt="لوگو برند شفاگیران ناب" class="project-img" title="لوگو شفاگیران ناب (برای بزرگنمایی کلیک کنید)">
+                        <img src="images/shafa.webp" alt="طراحی لوگو شفاگیران ناب" class="project-img" loading="lazy" title="لوگو شفاگیران ناب">
                     </div>
                     <div class="project-info">
-                        <h3>طراحی نشان‌واره (شفاگیران ناب)</h3>
-                        <p>طراحی لوگو برای برند تولید گلاب و عرقیات سنتی با تلفیق المان‌های طبیعت و قطره پیاده‌سازی و اجرای دقیق برداری (وکتور) به صورت کامل در نرم‌افزار <strong>ایلاستریتور (Illustrator)</strong></p>
+                        <h3>طراحی لوگو (شفاگیران ناب)</h3>
+                        <p>طراحی لوگو برای برند تولید گلاب و عرقیات سنتی با تلفیق المان‌های طبیعت و قطره و اجرای کامل طرح به صورت وکتور</p>
+                        <div class="project-tools">
+                            <span class="project-tool">Illustrator</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- نمونه کار: طراحی لوگو سالن زیبایی پری -->
+                <!-- ۳. لوگو سالن زیبایی پری -->
                 <div class="project-card box-shadow-soft">
                     <div class="project-image-container">
-                        <img src="images/pari.webp" alt="لوگو سالن زیبایی پری" class="project-img" title="لوگو سالن زیبایی پری (برای بزرگنمایی کلیک کنید)">
+                        <img src="images/pari.webp" alt="طراحی لوگو سالن زیبایی پری" class="project-img" loading="lazy" title="لوگو سالن زیبایی پری">
                     </div>
                     <div class="project-info">
-                        <h3>طراحی نشان تجاری (سالن زیبایی پری)</h3>
-                        <p>خلق یک هویت بصری لوکس و کلاسیک برای سالن زیبایی با استفاده از پترن‌های تزئینی و تایپوگرافی اختصاصی طراحی پایه‌ای در <strong>ایلاستریتور</strong> و ارائه نهایی در قالب موکاپ سه‌بعدی</p>
+                        <h3>طراحی هویت بصری (سالن زیبایی پری)</h3>
+                        <p>طراحی هویت بصری لوکس و کلاسیک برای سالن زیبایی با استفاده از تایپوگرافی و المان‌های تزئینی و ارائه طرح نهایی در قالب موکاپ</p>
+                        <div class="project-tools">
+                            <span class="project-tool">Illustrator</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- نمونه کار: طراحی کارت ویزیت (دیتیلینگ میرور) -->
+                <!-- ۴. طراحی رابط کاربری -->
                 <div class="project-card box-shadow-soft">
                     <div class="project-image-container double-img">
-                        <!-- عکس اول: روی کارت (لیست خدمات) -->
-                        <img src="images/11.webp" alt="روی کارت ویزیت دیتیلینگ خودرو میرور" class="project-img" loading="lazy" title="روی کارت (برای بزرگنمایی کلیک کنید)">
-                        <!-- عکس دوم: پشت کارت (QR Code) -->
-                        <img src="images/22.webp" alt="پشت کارت ویزیت دارای بارکد اسکن" class="project-img" loading="lazy" title="پشت کارت هوشمند (برای بزرگنمایی کلیک کنید)">
-                    </div>
-                    <div class="project-info">
-                        <h3>طراحی کارت ویزیت هوشمند (Mirror)</h3>
-                        <p>طراحی کارت ویزیت مربعی برای کلینیک تخصصی زیبایی اتومبیل. چیدمان خوانای خدمات در یک سمت و استفاده از طراحی مینیمال با محوریت <strong>QR Code</strong> در سمت دیگر برای ارجاع سریع و جذاب مخاطب به شبکه‌های اجتماعی.</p>
-                    </div>
-                </div>
-
-                <!-- نمونه کار: طراحی رابط کاربری (UI/UX) -->
-                <div class="project-card box-shadow-soft">
-                    <!-- استفاده از کلاس double-img برای چیدمان ساید‌بای‌ساید (کنار هم) -->
-                    <div class="project-image-container double-img">
-                        <!-- عکس اول: اپلیکیشن موسیقی نوا -->
-                        <img src="images/nava-app.webp" alt="رابط کاربری اپلیکیشن موسیقی نوا" class="project-img" title="اپلیکیشن موسیقی نوا (برای بزرگنمایی کلیک کنید)">
-                        <!-- عکس دوم: اپلیکیشن فیلم مووینو -->
-                        <img src="images/moovino-app.jpg.webp" alt="رابط کاربری اپلیکیشن فیلم مووینو" class="project-img" title="اپلیکیشن مووینو (برای بزرگنمایی کلیک کنید)">
+                        <img src="images/nava-app.webp" alt="رابط کاربری اپلیکیشن موسیقی نوا" class="project-img" loading="lazy" title="اپلیکیشن نوا">
+                        <img src="images/moovino-app.webp" alt="رابط کاربری اپلیکیشن مووینو" class="project-img" loading="lazy" title="اپلیکیشن مووینو">
                     </div>
                     <div class="project-info">
                         <h3>طراحی رابط کاربری موبایل (UI/UX)</h3>
-                        <p>طراحی رابط کاربری اپلیکیشن پخش موسیقی (نوا) و پلتفرم تماشای فیلم (مووینو) پیاده‌سازی معماری اطلاعات و طراحی بصری با تمرکز بر تجربه کاربری در <strong>فیگما (Figma)</strong></p>
+                        <p>طراحی رابط کاربری اپلیکیشن پخش موسیقی نوا و پلتفرم تماشای فیلم مووینو با تمرکز بر ساختار اطلاعات، طراحی بصری و تجربه کاربری</p>
+                        <div class="project-tools">
+                            <span class="project-tool">Figma</span>
+                            <span class="project-tool">UI/UX</span>
+                        </div>
                     </div>
                 </div>
 
+                <!-- ۵. کارت ویزیت Mirror -->
+                <div class="project-card box-shadow-soft">
+                    <div class="project-image-container double-img">
+                        <img src="images/11.webp" alt="روی کارت ویزیت دیتیلینگ خودرو میرور" class="project-img" loading="lazy" title="روی کارت ویزیت">
+                        <img src="images/22.webp" alt="پشت کارت ویزیت هوشمند میرور" class="project-img" loading="lazy" title="پشت کارت ویزیت">
+                    </div>
+                    <div class="project-info">
+                        <h3>طراحی کارت ویزیت هوشمند (Mirror)</h3>
+                        <p>طراحی کارت ویزیت برای کلینیک تخصصی زیبایی خودرو با تمرکز بر چیدمان خوانای اطلاعات، طراحی مینیمال و استفاده از QR Code برای دسترسی سریع به شبکه‌های اجتماعی</p>
+                        <div class="project-tools">
+                            <span class="project-tool">Photoshop</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ۶. بنر آیفون -->
+                <div class="project-card box-shadow-soft">
+                    <div class="project-image-container">
+                        <img src="images/iPhone17.webp" alt="طراحی بنر فروشگاهی آیفون ۱۷" class="project-img" loading="lazy" title="بنر آیفون ۱۷">
+                    </div>
+                    <div class="project-info">
+                        <h3>طراحی بنر فروشگاهی (آیفون ۱۷)</h3>
+                        <p>طراحی اسلایدر تبلیغاتی وب‌سایت با تمرکز بر ترکیب‌بندی، تایپوگرافی و ایجاد یک CTA واضح و جذاب</p>
+                        <div class="project-tools">
+                            <span class="project-tool">Photoshop</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ۷. بنر PS5 -->
+                <div class="project-card box-shadow-soft">
+                    <div class="project-image-container">
+                        <img src="images/ps5.webp" alt="طراحی بنر فروشگاهی پلی‌استیشن ۵" class="project-img" loading="lazy" title="بنر PS5">
+                    </div>
+                    <div class="project-info">
+                        <h3>طراحی اسلایدر سایت (PS5)</h3>
+                        <p>طراحی بنر تبلیغاتی محصول با تمرکز بر هماهنگی رنگ‌ها، جداسازی سوژه و ایجاد فضایی مینیمال و متعادل</p>
+                        <div class="project-tools">
+                            <span class="project-tool">Photoshop</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ۸. محتوای شبکه‌های اجتماعی -->
+                <div class="project-card box-shadow-soft">
+                    <div class="project-image-container">
+                        <img src="images/LinoBaf.webp" alt="طراحی محتوای شبکه‌های اجتماعی لینوباف" class="project-img" loading="lazy" title="محتوای شبکه‌های اجتماعی لینوباف">
+                    </div>
+                    <div class="project-info">
+                        <h3>محتوای شبکه‌های اجتماعی (لینوباف)</h3>
+                        <p>طراحی محتوای بصری برای صفحه اینستاگرام لینوباف با تمرکز بر معرفی محصول و ایجاد ترکیب‌بندی مناسب برای شبکه‌های اجتماعی</p>
+                        <div class="project-tools">
+                            <span class="project-tool">Photoshop</span>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
     </div>
 
-    <!-- مدال لایت‌باکس (برای بزرگ‌نمایی عکس‌ها) -->
+    <!-- ==================== Lightbox ==================== -->
     <div id="image-modal" class="modal">
         <span class="close-modal">&times;</span>
-        <img class="modal-content" id="full-image">
+        <img class="modal-content" id="full-image" alt="نمایش بزرگ تصویر">
     </div>
 
-    <!-- کدهای جاوااسکریپت -->
+    <!-- ==================== JavaScript ==================== -->
     <script>
-        // گرفتن المان‌های مربوط به لایت‌باکس
         const modal = document.getElementById("image-modal");
         const modalImg = document.getElementById("full-image");
-        const closeBtn = document.getElementsByClassName("close-modal")[0];
-        const images = document.querySelectorAll('.project-img'); // انتخاب تمام عکس‌های پروژه‌ها
+        const closeBtn = document.querySelector(".close-modal");
+        const images = document.querySelectorAll(".project-img");
 
-        // با کلیک روی هر عکس، لایت‌باکس باز می‌شود
+        // باز کردن تصویر
         images.forEach(img => {
-            img.addEventListener('click', function() {
-                modal.style.display = "flex"; // نمایش لایت‌باکس
-                modalImg.src = this.src; // قرار دادن سورس عکس کلیک شده در عکس بزرگ
+            img.addEventListener("click", function () {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+                modalImg.alt = this.alt;
             });
         });
 
-        // بستن لایت‌باکس با کلیک روی دکمه ضربدر
-        closeBtn.onclick = function() {
+        // بستن با ضربدر
+        closeBtn.addEventListener("click", function () {
             modal.style.display = "none";
-        }
+        });
 
-        // بستن لایت‌باکس با کلیک روی فضای خالی اطراف عکس
-        modal.onclick = function(e) {
-            if (e.target !== modalImg) {
+        // بستن با کلیک روی فضای اطراف
+        modal.addEventListener("click", function (event) {
+            if (event.target !== modalImg) {
                 modal.style.display = "none";
             }
-        }
+        });
+
+        // بستن با کلید Escape
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                modal.style.display = "none";
+            }
+        });
     </script>
 </body>
 </html>
