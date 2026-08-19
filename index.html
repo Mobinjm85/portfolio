@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مبین جوادی مقدم</title>
-    
-    <!-- اضافه کردن فونت وزیرمتن به صورت مستقیم -->
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -363,6 +359,35 @@
             </div>
 
             <section class="projects-grid" id="projects">
+
+                <!-- نمونه کار: تدوین ویدیو (Premiere) -->
+                <div class="project-card box-shadow-soft">
+                    <div class="project-image-container video-thumbnail-container">
+                        <!-- عکس کاور ویدیو -->
+                        <img src="images/cover.webp" 
+                             alt="نمونه کار تدوین ویدیو" 
+                             class="project-img" 
+                             data-video-src="images/final.webm" 
+                             loading="lazy" 
+                             title="برای تماشای ویدیو کلیک کنید">
+                        
+                        <!-- آیکون پلی شیشه‌ای روی کاور -->
+                        <div class="play-icon-overlay">
+                            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    
+                    <div class="project-info">
+                        <h3>طراحی تیزر تبلیغاتی با هوش مصنوعی</h3>
+                        <p> ساخت تیزر پریمیوم برای برند دیتیلینگ «میرور» با تمرکز بر نورپردازی استودیویی در محیط‌های تاریک، مهندسی پرامپت‌های سینمایی، اجرای روان تکنیک‌های حرکتی (Motion Brush) و فضاسازی صوتیِ یکپارچه برای القای حس لوکس بودن خدمات.</p>
+                        <div class="project-tools">
+                            <span class="project-tool">Premiere Pro</span>
+                            <span class="project-tool">Video Editing</span>
+                            <span class="project-tool">AI Video Generation</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- ۱. پوستر شهری -->
                 <div class="project-card box-shadow-soft">
                     <div class="project-image-container">
@@ -481,44 +506,65 @@
         </main>
     </div>
 
-    <!-- ==================== Lightbox ==================== -->
+<!-- ==================== Lightbox ==================== -->
     <div id="image-modal" class="modal">
         <span class="close-modal">&times;</span>
         <img class="modal-content" id="full-image" alt="نمایش بزرگ تصویر">
+        <!-- تگ جدید برای پخش ویدیو -->
+        <video class="modal-content" id="full-video" controls></video>
     </div>
-
-    <!-- ==================== JavaScript ==================== -->
+<!-- ==================== JavaScript ==================== -->
     <script>
         const modal = document.getElementById("image-modal");
         const modalImg = document.getElementById("full-image");
+        const modalVideo = document.getElementById("full-video");
         const closeBtn = document.querySelector(".close-modal");
         const images = document.querySelectorAll(".project-img");
 
-        // باز کردن تصویر
+        // باز کردن تصویر یا ویدیو
         images.forEach(img => {
             img.addEventListener("click", function () {
                 modal.style.display = "flex";
-                modalImg.src = this.src;
-                modalImg.alt = this.alt;
+                
+                // بررسی اینکه آیا این آیتم ویدیو است؟
+                if (this.hasAttribute("data-video-src")) {
+                    modalImg.style.display = "none";
+                    modalVideo.style.display = "block";
+                    modalVideo.src = this.getAttribute("data-video-src");
+                    modalVideo.play(); // پخش خودکار
+                } else {
+                    // اگر عکس معمولی بود
+                    modalVideo.style.display = "none";
+                    modalVideo.pause();
+                    modalVideo.src = "";
+                    modalImg.style.display = "block";
+                    modalImg.src = this.src;
+                    modalImg.alt = this.alt;
+                }
             });
         });
 
-        // بستن با ضربدر
-        closeBtn.addEventListener("click", function () {
+        // تابع بستن مُدال و قطع ویدیو
+        function closeModal() {
             modal.style.display = "none";
-        });
+            modalVideo.pause(); // قطع کردن صدا و تصویر ویدیو
+            modalVideo.src = ""; 
+        }
+
+        // بستن با ضربدر
+        closeBtn.addEventListener("click", closeModal);
 
         // بستن با کلیک روی فضای اطراف
         modal.addEventListener("click", function (event) {
-            if (event.target !== modalImg) {
-                modal.style.display = "none";
+            if (event.target !== modalImg && event.target !== modalVideo) {
+                closeModal();
             }
         });
 
         // بستن با کلید Escape
         document.addEventListener("keydown", function (event) {
             if (event.key === "Escape") {
-                modal.style.display = "none";
+                closeModal();
             }
         });
     </script>

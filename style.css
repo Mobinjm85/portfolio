@@ -1,4 +1,4 @@
-/* ========================================================
+/* =========================================================
    اسکرول نرم کل صفحه
 ========================================================= */
 html {
@@ -6,7 +6,10 @@ html {
     scroll-padding-top: 100px;
 }
 
-
+/* =========================================================
+   فونت
+========================================================= */
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
 
 /* =========================================================
    متغیرهای اصلی
@@ -748,6 +751,48 @@ body {
     }
 }
 
+/* =========================================================
+   استایل‌های مربوط به ویدیو
+========================================================= */
+.video-thumbnail-container {
+    position: relative;
+}
+
+.play-icon-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    pointer-events: none; /* باعث می‌شود کلیک روی عکسِ زیرین ثبت شود */
+    transition: all 0.3s ease;
+    z-index: 5;
+}
+
+.play-icon-overlay svg {
+    width: 30px;
+    height: 30px;
+    margin-left: 4px; /* تنظیم مرکزیت مثلث 플레이 */
+}
+
+.project-card:hover .play-icon-overlay {
+    background-color: var(--primary-green);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+#full-video {
+    display: none; /* پیش‌فرض مخفی است */
+    outline: none;
+    background-color: #000;
+}
 /* =========================================================
    تنظیمات چاپ / PDF
 ========================================================= */
