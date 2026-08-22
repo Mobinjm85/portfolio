@@ -736,6 +736,43 @@ body {
 }
 
 /* =========================================================
+   دکمه‌های فیلتر نمونه‌کارها
+========================================================= */
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.2rem;
+    background-color: var(--bg-box);
+    color: var(--text-muted);
+    border: 1px solid var(--border-light);
+    border-radius: 2rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.filter-btn:hover {
+    background-color: var(--light-green);
+    color: var(--dark-green);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-green);
+    color: #ffffff;
+    border-color: var(--primary-green);
+}
+
+/* =========================================================
    نمونه‌کارها
 ========================================================= */
 .projects-grid {
@@ -758,6 +795,7 @@ body {
     padding: 1.5rem;
 
     overflow: hidden;
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .project-image-container {
