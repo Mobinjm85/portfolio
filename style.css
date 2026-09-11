@@ -3,6 +3,7 @@
    ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
 
 /* ================= ROOT ================= */
 :root {
@@ -13,7 +14,7 @@
 
     --text: #f5f5f5;
     --text-soft: #a1a1a1;
-    --text-muted: #686868;
+    --text-muted: #8a8a8a;
 
     --accent: #b7ff00;
     --accent-dark: #8ec700;
@@ -24,6 +25,13 @@
     --radius: 24px;
     --container: 1180px;
     --transition: .35s cubic-bezier(.22,1,.36,1);
+
+    /* Typography scale (added to reduce repeated font-size values) */
+    --fs-xs: 10px;
+    --fs-sm: 12px;
+    --fs-body: 14px;
+    --fs-md: 16px;
+    --fs-lg: 19px;
 }
 
 /* ================= RESET ================= */
@@ -69,6 +77,27 @@ img, video {
     color: #000;
 }
 
+/* ================= FOCUS (accessibility) ================= */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.nav-cta:focus-visible,
+.filter-btn:focus-visible,
+.contact-btn:focus-visible,
+.project-card:focus-visible,
+.back-top:focus-visible,
+.lightbox-close:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+/* Utility: force LTR direction/typesetting for numbers, dates, latin words */
+.ltr {
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
 /* ================= SCROLLBAR ================= */
 ::-webkit-scrollbar {
     width: 7px;
@@ -98,8 +127,7 @@ img, video {
 .navbar {
     position: fixed;
     top: 18px;
-    right: 0;
-    left: 0;
+    inset-inline: 0;
     z-index: 1000;
 }
 
@@ -239,11 +267,12 @@ img, video {
 
 .hero h1 {
     margin-bottom: 5px;
-    font-size: clamp(45px, 5.5vw, 82px); /* سایز کمی جمع‌وجورتر شد */
-    white-space: nowrap; /* این دستور مانع دو خطی شدن میشه */
+    font-size: clamp(38px, 5.5vw, 82px);
     line-height: 1.05;
     letter-spacing: -2px;
     font-weight: 800;
+    /* Long names/titles can still wrap on narrow desktop widths (700–950px);
+       nowrap removed in favor of a safer clamp + normal wrapping. */
 }
 
 .hero h2 {
@@ -1014,7 +1043,7 @@ footer {
 .lightbox-close {
     position: fixed;
     top: 25px;
-    left: 25px;
+    inset-inline-start: 25px;
     z-index: 10;
     width: 48px;
     height: 48px;
@@ -1077,7 +1106,7 @@ footer {
     }
     .nav-cta { display: none; }
     .mobile-menu-btn { display: block; }
-    
+
     .hero-container { grid-template-columns: 1fr; gap: 60px; }
     .hero-image-wrapper { justify-self: center; max-width: 340px; }
     .hero-content { text-align: center; }
@@ -1098,8 +1127,7 @@ footer {
     .nav-container { min-height: 60px; }
     .hero { min-height: auto; padding: 150px 0 100px; }
     .hero h1 {
-        font-size: clamp(38px, 11vw, 55px);
-        white-space: normal; /* اجازه شکستن خط در موبایل */
+        font-size: clamp(34px, 11vw, 55px);
         letter-spacing: -2px;
     }
     .hero h2 { font-size: 22px; gap: 8px; flex-wrap: wrap; }
